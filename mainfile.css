@@ -1,0 +1,20 @@
+body{
+    text-align: center;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+a:visited{color: black}
+a:active{color: black}
+table{
+    margin: auto;
+    border-collapse: collapse;
+}
+tr:nth-child(even){background-color: gainsboro;}
+tr:nth-child(odd){background-color: #f0f0f0;}
+td{width: 500px; padding: 10px;}
