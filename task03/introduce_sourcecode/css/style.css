@@ -146,15 +146,19 @@ ul li:nth-child(3)::before {
 }
 
 #project a {
-    color: gold;
+    color: gray;
     display: inline-block;
     border-radius: 4px;
     padding: 2px 8px 2px 0;
+    font-size: 20px;
 }
 
 #project a:hover {
     background-color: #2f2f2f;
+    color: #f0f0f0;
     text-decoration: none;
     padding: 2px 8px;
     transition: padding 0.2s;
 }
+#project a:hover img{filter: invert(100%);}
+#project a img{width: 30px;}
