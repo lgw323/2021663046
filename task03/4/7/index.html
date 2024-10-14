@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>:hover 활용</title>
+    <style>
+        .trump{
+            float: right;
+            width: 200px;
+            height: 300px;
+            background-image: url(back.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .trump:hover{
+            background-image: url(front.png);
+        }
+    </style>
+</head>
+<body>
+    <h3>:hover 활용</h3>
+    <hr>
+    <div style="clear: both;">
+        <p style="float: left;">
+            마우스를 올리면 카드의 앞면이 보인다
+        </p>
+        <div class="trump">
+        </div>
+    </div>
+</body>
+</html>

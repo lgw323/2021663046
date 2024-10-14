@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>transition</title>
+    <style>
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        img:hover{
+            animation-name: widthAdjust;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes widthAdjust {
+            from {
+                width: 200px;
+                height: 200px;
+            }
+            to {
+                width: 600px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h3>마우스를 올려봐요</h3>
+        <hr>
+    </header>
+    <section>
+        <img src="spongebob.png" alt="스폰지밥">
+    </section>
+</body>
+</html>
