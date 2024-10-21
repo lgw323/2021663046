@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>난수</title>
+    <script>
+        function mergesort(arr, s, e)
+        {
+            if(s >= e) return;
+            let m = s+Math.floor((e-s)/2);
+            mergesort(arr, s, m);
+            mergesort(arr, m+1, e);
+            merge(arr, s, m, m+1, e);
+        }
+        function merge(arr, s1, e1, s2, e2)
+        {
+            let i = s1, j = s2, k = 0, x = new Array(e2-s1+1).fill(0);
+            while(i <= e1 && j <= e2)
+            {
+                if(arr[i] < arr[j])
+                {
+                    x[k] = arr[i];
+                    i += 1;
+                    k += 1;
+                }
+                else
+                {
+                    x[k] = arr[j];
+                    j += 1;
+                    k += 1;
+                }
+            }
+            while(i <= e1)
+            {
+                x[k] = arr[i];
+                i += 1;
+                k += 1;
+            }
+            while(j <= e2)
+            {
+                x[k] = arr[j];
+                j += 1;
+                k += 1;
+            }
+            arr.splice(s1, e2-s1+1, ...x);
+        }
+    </script>
+</head>
+<body>
+    <h3>난수 10개 생성</h3>
+    <hr>
+    <script>
+        let n = [];
+        for(let i = 0; i < 10; i++)
+        {
+            let num = Math.random()*100 + 1;
+            n[i] = Math.floor(num);
+        }
+        for(let i = 0; i < 10; i++){document.writeln(n[i]);}
+        document.write("<hr>");
+
+        let big = n[0];
+        for(let i = 1; i < 10; i++){if(big < n[i]){big = n[i];}}
+        document.write("제일 큰 수는: "+big);
+        document.write("<hr>");
+
+        mergesort(n, 0, n.length-1);
+        for(let i = 0; i < 10; i++){document.writeln(n[i]);}
+    </script>
+</body>
+</html>

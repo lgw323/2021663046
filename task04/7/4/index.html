@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>방문날짜 배경색</title>
+</head>
+<body>
+    <h3>일요일은 pink, 다른 요일은 gold 배경</h3>
+    <hr>
+    <script>
+        let now = new Date();
+        let date = now.getDate();
+        let day = now.getDay();
+
+        let week = new Array("일", "월", "화", "수", "목", "금", "토");
+        let color = (week[day] == "일" ? "pink" : "gold");
+        document.body.style.backgroundColor = color;
+        document.write("오늘: "+date+", "+week[day]+"요일");
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>방문시간 배경색</title>
+</head>
+<body>
+    <h3>오전이면 lightskyblue, 오후이면 orange 배경</h3>
+    <hr>
+    <script>
+        let now = new Date();
+        let hour = now.getHours();
+        let min = now.getMinutes();
+        let sec = now.getSeconds();
+        let color = hour >= 12 ? "orange":"lightskyblue";
+        document.body.style.backgroundColor = color;
+        document.write("현재 시간: "+hour+"시 "+min+"분 "+sec+"초");
+    </script>
+</body>
+</html>
