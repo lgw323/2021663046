@@ -1,0 +1,74 @@
+body{
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+header{
+    padding: 50px;
+    background-color: #333;
+    color: white;
+}
+header h1{font-size: 3rem;}
+header p{font-size: 1.2rem;}
+div p{
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 auto 20px;
+    background-color: #495057;
+    color: white;
+    height: 20px;
+    line-height: 20px;
+    width: 200px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 8px black;
+}
+h2{
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #343a40;
+    color: white;
+}
+.project{
+    background-color: white;
+    padding: 15px;
+    margin: 0 auto 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px;
+    width: 80%;
+    max-width: 600px;
+}
+.project a{
+    text-decoration: none;
+    font-weight: bold;
+    color: gray;
+    transition: color 0.3s ease;
+}
+.project a:hover{
+    color: black;
+}
+
+.tab{
+    display: flex;
+    cursor: pointer;
+    border-bottom: 2px solid #ccc;
+    justify-content: center;
+    align-items: center;
+}
+.tab div{
+    padding: 10px;
+    margin-right: 5px;
+}
+.tab div.activate{
+    border-bottom: 3px solid #007bff;
+    font-weight: bold;
+}
+
+.tab-content{
+    display: none;
+}
+.tab-content.activate{
+    display: block;
+}

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="mainfile.css" type="text/css">
+    <link rel="stylesheet" href="cssmainfile.css" type="text/css">
     <base href="https://lgw323.github.io/2021663046/">
     <title>웹 프로그래밍 실습 저장소</title>
 </head>
@@ -12,10 +12,26 @@
         <p>HTML, CSS 등 실습 과제를 저장합니다.</p>
     </header>
     
-    <section>
-        <article>
-            <h2 id="OpenChallenge">OpenChallenge</h2>
+    <div class="tab">
+        <div data-target="all" class="activate">전체</div>
+        <div data-target="OpenChallenge">OpenChallenge</div>
+        <div data-target="First">First</div>
+        <div data-target="Second">Second</div>
+        <div data-target="Third">Third</div>
+        <div data-target="Fourth">Fourth</div>
+    </div>
 
+    <section id="all" class="tab-content">
+        <div id="all-content">
+
+        </div>
+    </section>
+
+    <section id="OpenChallenge" class="tab-content">
+        <h2>OpenChallenge</h2>
+        
+        <div>
+            <p id="op1">OpenChallenge</p>
             <div class="project">
                 <h3>58p-오픈챌린지01</h3>
                 <a href="58p/index.html">깃허브로이동</a>
@@ -36,11 +52,22 @@
                 <h3>249p-오픈챌린지05</h3>
                 <a href="task03/249p/index.html">깃허브로이동</a>
             </div>
-        </article>
+            <div class="project">
+                <h3>303p-오픈챌린지06</h3>
+                <a href="task04/303p/index.html">깃허브로이동</a>
+            </div>
+            <div class="project">
+                <h3>340p-오픈챌린지07</h3>
+                <a href="task04/340p/index.html">깃허브로이동</a>
+            </div>
+        </div>
+    </section>
 
-        <article>
-            <h2 id="First">First</h2>
+     <section id="First" class="tab-content">
+        <h2>First Week</h2>
 
+        <div>
+            <p id="Chapter1">Chapter1</p>
             <div class="project">
                 <h3>01-오픈챌린지01</h3>
                 <a href="58p/index.html">깃허브로이동</a>
@@ -49,11 +76,14 @@
                 <h3>02-오픈챌린지02</h3>
                 <a href="104p/index.html">깃허브로이동</a>
             </div>
-        </article>
+        </div>
+     </section>
+     
+     <section id="Second" class="tab-content">
+        <h2>Second Week</h2>
 
-        <article>
-            <h2 id="Second">Second</h2>
-
+        <div>
+            <p id="Chapter2">Chapter2</p>
             <div class="project">
                 <h3>01-시 출력</h3>
                 <a href="task02/107p-110p/1/index.html">깃허브로이동</a>
@@ -94,35 +124,40 @@
                 <h3>10-자기소개하는영상</h3>
                 <a href="task02/107p-110p/8/index.html">깃허브로이동</a>
             </div>
+
+            <p id="Chapter3">Chapter3</p>
             <div class="project">
-                <h3>11-오픈챌린지03</h3>
+                <h3>01-오픈챌린지03</h3>
                 <a href="task02/151p/index.html">깃허브로이동</a>
             </div>
             <div class="project">
-                <h3>12-버튼9개</h3>
+                <h3>02-버튼9개</h3>
                 <a href="task02/153p-155p/1/index.html">깃허브로이동</a>
             </div>
             <div class="project">
-                <h3>13-figure태그</h3>
+                <h3>03-figure태그</h3>
                 <a href="task02/153p-155p/2/index.html">깃허브로이동</a>
             </div>
             <div class="project">
-                <h3>14-로그인필드</h3>
+                <h3>04-로그인필드</h3>
                 <a href="task02/153p-155p/3/index.html">깃허브로이동</a>
             </div>
             <div class="project">
-                <h3>15-details태그</h3>
+                <h3>05-details태그</h3>
                 <a href="task02/153p-155p/4/index.html">깃허브로이동</a>
             </div>
             <div class="project">
-                <h3>16-도형서식입력</h3>
+                <h3>06-도형서식입력</h3>
                 <a href="task02/153p-155p/5/index.html">깃허브로이동</a>
             </div>
-        </article>
+        </div>
+     </section>
 
-        <article>
-            <h2 id="Third">Third</h2>
+     <section id="Third" class="tab-content">
+        <h2>Third Week</h2>
 
+        <div>
+            <p id="Chapter4">Chapter4</p>
             <div class="project">
                 <h3>01-소연재</h3>
                 <a href="task03/4/1/index.html">깃허브로이동</a>
@@ -160,74 +195,213 @@
                 <a href="task03/4/9/index.html">깃허브로이동</a>
             </div>
             <div class="project">
-                <h3>10-3개의div</h3>
+                <h3>10-오픈챌린지04</h3>
+                <a href="task03/202p/index.html">깃허브로이동</a>
+            </div>
+
+            <p id="Chapter5">Chapter5</p>
+            <div class="project">
+                <h3>01-3개의div</h3>
                 <a href="task03/5/1/index.html">깃허브로이동</a>
             </div>
             <div class="project">
-                <h3>10-3개의div-2</h3>
+                <h3>02-3개의div-2</h3>
                 <a href="task03/5/1/index2.html">깃허브로이동</a>
             </div>
             <div class="project">
-                <h3>11-소연재-2</h3>
+                <h3>03-소연재-2</h3>
                 <a href="task03/5/2/index.html">깃허브로이동</a>
             </div>
             <div class="project">
-                <h3>12-오디오재생리스트</h3>
+                <h3>04-오디오재생리스트</h3>
                 <a href="task03/5/3/index.html">깃허브로이동</a>
             </div>
             <div class="project">
-                <h3>13-리스트만들기</h3>
+                <h3>05-리스트만들기</h3>
                 <a href="task03/5/4/index.html">깃허브로이동</a>
             </div>
             <div class="project">
-                <h3>14-리스트만들기-2</h3>
+                <h3>06-리스트만들기-2</h3>
                 <a href="task03/5/4/index2.html">깃허브로이동</a>
             </div>
             <div class="project">
-                <h3>15-float배치</h3>
+                <h3>07-float배치</h3>
                 <a href="task03/5/5/index.html">깃허브로이동</a>
             </div>
             <div class="project">
-                <h3>16-애니메이션</h3>
+                <h3>08-애니메이션</h3>
                 <a href="task03/5/6/index.html">깃허브로이동</a>
             </div>
             <div class="project">
-                <h3>17-애니메이션-2</h3>
+                <h3>09-애니메이션-2</h3>
                 <a href="task03/5/6/index2.html">깃허브로이동</a>
             </div>
             <div class="project">
-                <h3>18-트랜지션</h3>
+                <h3>10-트랜지션</h3>
                 <a href="task03/5/7/index.html">깃허브로이동</a>
             </div>
             <div class="project">
-                <h3>19-리스트로수직메뉴</h3>
+                <h3>11-리스트로수직메뉴</h3>
                 <a href="task03/5/8/index.html">깃허브로이동</a>
             </div>
             <div class="project">
-                <h3>20-카푸치노만들기</h3>
+                <h3>12-카푸치노만들기</h3>
                 <a href="task03/5/9/index.html">깃허브로이동</a>
             </div>
             <div class="project">
-                <h3>21-애니메이션응용</h3>
+                <h3>13-애니메이션응용</h3>
                 <a href="task03/5/10/index.html">깃허브로이동</a>
             </div>
             <div class="project">
-                <h3>22-오픈챌린지04</h3>
-                <a href="task03/202p/index.html">깃허브로이동</a>
-            </div>
-            <div class="project">
-                <h3>23-오픈챌린지05</h3>
+                <h3>14-오픈챌린지05</h3>
                 <a href="task03/249p/index.html">깃허브로이동</a>
             </div>
             <div class="project">
-                <h3>24-별첨자료-박희근자기소개페이지</h3>
+                <h3>15-별첨자료-박희근자기소개페이지</h3>
                 <a href="task03/introduce_park/profile.html">깃허브로이동</a>
             </div>
             <div class="project">
-                <h3>25-별첨자료-간단한자기소개서</h3>
+                <h3>16-별첨자료-간단한자기소개서</h3>
                 <a href="task03/introduce_sourcecode/index.html">깃허브로이동</a>
             </div>
-        </article>
+        </div>    
     </section>
+
+    <section id="Fourth" class="tab-content">
+        <h2>Fourth Week</h2>
+
+        <div>
+            <p id="Chapter6">Chapter6</p>
+            <div class="project">
+                <h3>01-자바스크립트코드위치</h3>
+                <a href="task04/6/1/index.html">깃허브로이동</a>
+            </div>
+            <div class="project">
+                <h3>02-자바스크립트코드파일분리</h3>
+                <a href="task04/6/1/index2.html">깃허브로이동</a>
+            </div>
+            <div class="project">
+                <h3>03-document.write</h3>
+                <a href="task04/6/2/index.html">깃허브로이동</a>
+            </div>
+            <div class="project">
+                <h3>04-document.write응용-1</h3>
+                <a href="task04/6/3/index.html">깃허브로이동</a>
+            </div>
+            <div class="project">
+                <h3>05-document.write응용-2</h3>
+                <a href="task04/6/3/index2.html">깃허브로이동</a>
+            </div>
+            <div class="project">
+                <h3>06-월화수목금토일</h3>
+                <a href="task04/6/4/index.html">깃허브로이동</a>
+            </div>
+            <div class="project">
+                <h3>07-암호입력</h3>
+                <a href="task04/6/5/index.html">깃허브로이동</a>
+            </div>
+            <div class="project">
+                <h3>08-조건문-1</h3>
+                <a href="task04/6/6/index.html">깃허브로이동</a>
+            </div>
+            <div class="project">
+                <h3>09-조건문-2</h3>
+                <a href="task04/6/6/index2.html">깃허브로이동</a>
+            </div>
+            <div class="project">
+                <h3>10-큰자릿수와낮은자릿수비교</h3>
+                <a href="task04/6/7/index.html">깃허브로이동</a>
+            </div>
+            <div class="project">
+                <h3>11-eval로수식계산</h3>
+                <a href="task04/6/8/index.html">깃허브로이동</a>
+            </div>
+
+            <p id="Chapter7">Chapter7</p>
+            <div class="project">
+                <h3>01-난수</h3>
+                <a href="task04/7/1/index.html">깃허브로이동</a>
+            </div>
+            <div class="project">
+                <h3>02-정수5개역순</h3>
+                <a href="task04/7/2/index.html">깃허브로이동</a>
+            </div>
+            <div class="project">
+                <h3>03-방문시간배경색</h3>
+                <a href="task04/7/3/index.html">깃허브로이동</a>
+            </div>
+            <div class="project">
+                <h3>04-방문날짜배경색</h3>
+                <a href="task04/7/4/index.html">깃허브로이동</a>
+            </div>
+            <div class="project">
+                <h3>05-문자열배열</h3>
+                <a href="task04/7/5/index.html">깃허브로이동</a>
+            </div>
+            <div class="project">
+                <h3>06-문자열분할</h3>
+                <a href="task04/7/6/index.html">깃허브로이동</a>
+            </div>
+            <div class="project">
+                <h3>07-CSS2색상들</h3>
+                <a href="task04/7/7/index.html">깃허브로이동</a>
+            </div>
+            <div class="project">
+                <h3>08-랜덤한CSS2색상들</h3>
+                <a href="task04/7/8/index.html">깃허브로이동</a>
+            </div>
+            <div class="project">
+                <h3>09-Book객체만들기</h3>
+                <a href="task04/7/9/index.html">깃허브로이동</a>
+            </div>
+            <div class="project">
+                <h3>10-Book객체만들기-리터럴</h3>
+                <a href="task04/7/9/index2.html">깃허브로이동</a>
+            </div>
+            <div class="project">
+                <h3>11-Book객체만들기-프로토타입</h3>
+                <a href="task04/7/9/index3.html">깃허브로이동</a>
+            </div>
+            <div class="project">
+                <h3>12-Book객체배열만들기</h3>
+                <a href="task04/7/10/index.html">깃허브로이동</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 모든 탭 요소, 탭 콘텐츠 선택
+            const tabs = document.querySelectorAll('.tab div');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            // 각 탭의 내용을 'all-content'에 복사
+            const allContent = document.getElementById('all-content');
+            tabContents.forEach(content => {
+                if(content.id !== 'all') {
+                    allContent.innerHTML += content.innerHTML;
+                }
+            });
+
+            // 각 탭에 클릭 이벤트 추가
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // 모든 탭, 탭 콘텐츠에서 'activate' 클래스 제거
+                    tabs.forEach(el => el.classList.remove('activate'));
+                    tabContents.forEach(content => content.classList.remove('activate'));
+
+                    // 클릭한 탭에 'activate' 클래스 추가
+                    tab.classList.add('activate');
+
+                    // 클릭한 탭의 데이터 타겟 가져오기
+                    const target = tab.getAttribute('data-target');
+                    const targetElement = document.getElementById(target);
+
+                    // 대응되는 콘텐츠에 'activate' 클래스 추가
+                    if (targetElement) {targetElement.classList.add('activate');}
+                });
+            });
+        });
+    </script>
 </body>
 </html>
