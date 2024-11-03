@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>갬블링 게임</title>
+    <style>
+        #numbers {
+            border: 1px solid red;
+            background-color: antiquewhite;
+            color: blue;
+            width: 300px;
+            height: 150px;
+            text-align: center;
+        }
+        div span {
+            padding: 10px;
+            font-weight: bold;
+            font-size: 100px;
+            font-style: italic;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.onload = function()
+        {
+            let spans = document.getElementsByTagName("span");
+            let numbers = document.getElementById("numbers");
+            let result = document.getElementById("result");
+            let current = 0;
+            for(let i = 0; i < spans.length; i++)
+            {
+                spans[i].onclick = function()
+                {
+                    if(i == current)
+                    {
+                        spans[i].innerHTML = Math.floor(Math.random()*3);
+                        current++;
+                        if(current == spans.length)
+                        {
+                            if(spans[0].innerHTML == spans[1].innerHTML && spans[1].innerHTML == spans[2].innerHTML && spans[0].innerHTML == spans[2].innerHTML)
+                            {
+                                result.innerHTML = "Success(click here to do again)"
+                            }
+                            else {result.innerHTML = "fail(click here to do again)"}
+                            result.onclick = function()
+                            {
+                                for(let span of spans) span.innerHTML = "0";
+                                result.innerHTML = "";
+                                current = 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>갬블링 게임</h3>
+    <p>
+        각 숫자를 클릭하면 0에서 2사이의 난수로 바뀝니다. 모두 같은 수가 나오면 승리합니다.
+    </p>
+    <hr>
+    <div id="numbers"><span>0</span><span>0</span><span>0</span></div>
+    <p id="result"></p>
+</body>
+</html>

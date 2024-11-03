@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>onmouseover과 onmouseout</title>
+    <style>
+        #explain {
+            border: 1px solid green;
+            background-color: #f4f4f4;
+        }
+    </style>
+    <script>
+        window.onload = function()
+        {
+            let list = document.getElementsByTagName("li");
+            let box = document.getElementById("explain");
+            for(let i = 0; i < list.length; i++)
+            {
+                list[i].onmouseover = function(e)
+                {
+                    box.style.left = e.pageX + "px";
+                    box.style.top = e.pageY + "px";
+                    box.style.visibility = "visible";
+                    if(i == 0) {box.innerHTML = "빨간자전거를 타고 서울, 대전, 대구, 부산으로 복귀하는 과정을 거친다.";}
+                    if(i == 1) {box.innerHTML = "삶에 필요한 교양을 간단히 읽고, 전공과 자격증 위주로 지식을 습득한다.";}
+                    if(i == 2) {box.innerHTML = "체력이 곧 국력이니 강인한 체력을 위해 최선을 다한다.";}
+                    if(i == 3) {box.innerHTML = "onmouseover, onmouseout, target등 다양한 자바스크립트 코드들을 공부한다.";}
+                }
+                list[i].onmouseout = function(e)
+                {
+                    box.style.visibility = "hidden";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>아이템에 마우스를 올리면 설명 출력</h3>
+    <hr>
+    <p>여름 방학 때 하고 싶은 것들</p>
+    <ul>
+        <li>자전거로 대한민국 일주</li>
+        <li>책 100권 읽기</li>
+        <li>철인 3종 경기 준비</li>
+        <li>자바스크립트 정복</li>
+    </ul>
+    <div id="explain" style="position: absolute; visibility: hidden;">sdasd</div>
+</body>
+</html>

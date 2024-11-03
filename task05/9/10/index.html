@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>계산기 만들기</title>
+    <style>
+        button {
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        #buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+    </style>
+    <script>
+        window.onload = function()
+        {
+            let nums = [7, 8, 9, "/", 4, 5, 6, "*", 1, 2, 3, "-", 0, "+"];
+            let list = document.getElementsByTagName("button");
+            let buttons = document.getElementById("buttons");
+            let output = document.getElementById("output");
+            buttons.onclick = function(e)
+            {
+                for(let i = 0; i < list.length; i++)
+                if(e.target == list[i])
+                {
+                    if(i == 0) {output.value = output.value.slice(0, -1);}
+                    if(i == 1) {output.value = "";}
+                    if(i == 2) {output.value = "";}
+                    if(i == 3) {output.value = eval(output.value);}
+                    if(i >= 4 && i <= 17) {output.value += nums[i-4];}
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>계산기 만들기</h3>
+    <hr>
+    <input type="text" id="output" value="" placeholder="0" readonly>
+    <div id="buttons">
+        <button>BACK</button>
+        <button>CE</button>
+        <button>C</button>
+        <button>=</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>/</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>*</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>-</button>
+        <button>0</button>
+        <button>+</button>
+        <button>NONE</button>
+        <button>NONE</button>
+    </div>
+</body>
+</html>

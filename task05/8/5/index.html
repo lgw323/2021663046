@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>z-index 스타일 프로퍼티</title>
+    <style>
+        img{
+            position: absolute;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            let zidx = document.getElementsByTagName("img");
+            for(let i = 0; i < zidx.length; i++) {zidx[i].style.zIndex = i;}
+        }
+        function card()
+        {
+            let zidx = document.getElementsByTagName("img");
+            let first = zidx[0].style.zIndex;
+            for(let i = 0; i < zidx.length-1; i++) {zidx[i].style.zIndex = zidx[i+1].style.zIndex;}
+            zidx[zidx.length-1].style.zIndex = first;
+        }
+    </script>
+</head>
+<body>
+    <h3>z-index 스타일 프로퍼티</h3>
+    <hr>
+    <div>
+        <img src="spadeA.png" width="100" height="140" alt="스페이드A" onclick="card()">
+        <img src="spade2.png" width="100" height="140" alt="스페이드2" onclick="card()">
+        <img src="spade3.png" width="100" height="140" alt="스페이드3" onclick="card()">
+        <img src="spade7.png" width="100" height="140" alt="스페이드7" onclick="card()">
+    </div>
+</body>
+</html>

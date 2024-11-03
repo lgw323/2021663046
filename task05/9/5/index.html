@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>자바스크립트연습</title>
+    <script>
+        window.ondblclick = function()
+        {
+            let n = [];
+            for(let j = 0; j < 3; j++) {n[j] = Math.floor(Math.random()*256);}
+            document.body.style.background = "rgb("+n[0]+","+n[1]+","+n[2]+")";
+        }
+    </script>
+</head>
+<body>
+    <h3>바탕 아무곳에나 더블 클릭</h3>
+    <hr>
+    <p>
+        바탕 아무 곳이나 <strong>더블클릭</strong>하면 배경색이 랜덤하게 변합니다.
+    </p>
+</body>
+</html>

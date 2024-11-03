@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>이벤트 객체의 target-2</title>
+    <script>
+        let list = document.getElementsByTagName("li");
+        function clicked(e)
+        {
+            let obj = e.target;
+            for(let i = 0; i < list.length; i++) {list[i].style.fontSize = "1em";}
+            obj.style.fontSize = "1.3em";
+            obj.style.transition = "font-size 0.2s ease";
+        }
+    </script>
+</head>
+<body>
+    <h3>아이템을 클릭하면 1.3배 크기로</h3>
+    <hr>
+    <p>여름 방학 때 하고 싶은 것들</p>
+    <ul onclick="clicked(event)">
+        <li>자전거로 대한민국 일주</li>
+        <li>책 100권 읽기</li>
+        <li>철인 3종 경기 준비</li>
+        <li>자바스크립트 정복</li>
+    </ul>
+</body>
+</html>

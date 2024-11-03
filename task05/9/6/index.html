@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>onwheel</title>
+    <style>
+        img {
+            transition: transform 0.2s ease;
+            transform-origin: top left;
+        }
+    </style>
+    <script>
+        window.onload = function()
+        {
+            let image = document.getElementById("choice");
+            let num = 1;
+            image.onwheel = function(e)
+            {
+                e.preventDefault();
+                if(e.deltaY > 0) {num += 0.05;}
+                else
+                {
+                    num -= 0.05;
+                    if(num <= 0) {num = 0.05;}
+                }
+                image.style.transform = "scale(" + num + ", " + num + ")";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>마우스 휠을 이용한 이미지 확대/축소</h3>
+    <hr>
+    <p>
+        이미지 위에 휠을 위로 굴리면 이미지가 축소되고 아래로 굴리면 이미지가 확대됩니다.
+    </p>
+    <img src="USS_Missouri_BB_63.png" width="200px" alt="BB63" id="choice">
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>transform:scale</title>
+    <style>
+        img {
+            transition: transform 0.5s ease;
+        }
+    </style>
+    <script>
+        let basic = 2;
+        function pull(img)
+        {
+            if(basic > 4) {basic = 2;}
+            img.style.transform = "scale("+basic+++",1)";
+        }
+    </script>
+</head>
+<body>
+    <h3>클릭하면 2,3,4,배로 옆으로 늘어납니다.</h3>
+    <hr>
+    <img src="spongebob.png" alt="스폰지밥" onclick="pull(this)">
+</body>
+</html>

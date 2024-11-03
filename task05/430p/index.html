@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>마우스 클릭 연습</title>
+    <style>
+        table {
+            border: 1px solid black;
+        }
+        td {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        window.onload = function()
+        {
+            let coord = 0;
+            function maketable()
+            {
+                let nums =  [Math.floor(Math.random()*10), Math.floor(Math.random()*10)];
+                let table = document.createElement("table");
+                for(let i = 0; i < 10; i++)
+                {
+                    let row = document.createElement("tr");
+                    for(let j = 0; j < 10; j++)
+                    {
+                        let cell = document.createElement("td");
+                        let img = document.createElement("img");
+                        img.width = "50";
+                        
+                        if(nums[0] == i && nums[1] == j)
+                        {
+                            img.src = "spongebob.png";
+                            img.id = "imgs";
+                            coord = i*10 + j;
+                        }
+                        
+                        cell.appendChild(img);
+                        row.appendChild(cell);
+                    }
+                    table.appendChild(row);
+                }
+                document.body.appendChild(table);
+            }
+            maketable();
+            let image = document.getElementById("imgs");
+            let images = document.getElementsByTagName("img");
+
+            if(image) {image.onclick = moveimage;}
+
+            function moveimage()
+            {
+                let i;
+                do
+                {
+                    i = Math.floor(Math.random()*100);
+                } while(i == coord);
+
+                if(image)
+                {
+                    image.removeAttribute("id");
+                    image.src = "";
+                    image.onclick = null;
+                }
+                images[i].setAttribute("id", "imgs");
+                images[i].setAttribute("src", "spongebob.png");
+
+                image = images[i];
+                coord = i;
+                image.onclick = moveimage;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>마우스 클릭 연습</h3>
+    <hr>
+</body>
+</html>
