@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>간단한 자기소개 페이지를 js로 구현하기</title>
+    <script>
+        function hthree(text){document.write("<h3>" + text + "</h3>");}
+        function line(){document.write("<hr>");}
+        function linechange(){document.write("<br>");}
+        function ptag(text){document.write("<p>" + text + "</p>");}
+        function ulstart(){document.write("<ul>");}
+        function ulend(){document.write("</ul>");}
+        function litag(text){document.write("<li>" + text + "</li>");}
+    </script>
+</head>
+<body>
+    <script>
+        hthree("이건우의 자기소개");
+        line();
+        ptag("안녕하세요 저는 소프트웨어학과 2학년 이건우입니다.")
+        ptag("저는 웹 개발에 관심이 많으며 HTML, CSS, 그리고 JavaScript를 배우면서 다양한 실습을 진행해 왔습니다.")
+        linechange();
+        ptag("나를 소개합니다.");
+        ulstart()
+        litag("저는 경성대학교에서 소프트웨어학과를 전공하며, 학업을 통해 C, 자바, HTML 등 다양한 프로그래밍 언어를 배우고 있습니다.");
+        litag("제가 학습하는 프로그래밍 언어들은 단순히 지식을 쌓는 것을 넘어서, 실제 실습에 응용하고 문제를 해결하는 데 중점을 두고 있습니다. 프로그래밍을 통해 새로운 기술을 배우고, 이를 실생활이나 다양한 프로젝트에 적용해 나가는 것이 목표입니다.");
+        litag("여가 시간에는 주로 컴퓨터 게임을 즐기며 스트레스를 해소합니다. 특히 FPS(1인칭 슈팅 게임)와 전략 게임을 좋아하는데, FPS 게임은 빠른 반응 속도와 정확성이 요구되며, 전략 게임은 치밀한 계획과 전술적 사고를 요합니다. 이러한 게임들은 단순한 재미를 넘어서, 제게 도전 정신과 전략적 사고 능력을 키워줍니다.");
+        ulend();
+    </script>
+</body>
+</html>
