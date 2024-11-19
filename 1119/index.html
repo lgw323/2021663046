@@ -4,86 +4,52 @@
     <meta charset="utf-8">
     <title>하나로 엮기</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        h3 {
-            margin: 25px;
-            text-align: center;
-        }
-        .main-container {
-            display: flex;
-            height: 100vh;
-            gap: 20px;
-        }
-        .list-container {
-            width: 20%;
-        }
-        .iframe-container {
-            width: 80%;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-        }
-        a {
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: none;
-            color: white;
-            background-color: lightgray;
-            transition: ease 0.2s;
-        }
-    </style>
 </head>
 <body>
     <h3>HTML 파일 리스트</h3>
     <hr>
-    <div class="main-container container text-center">
-        <div class="list-container">
-            <ul class="list-group">
-                <a href="jquery/ex1.html" class="list-group-item" target="iframe-display">ex1.html</a>
-                <a href="jquery/ex2.html" class="list-group-item" target="iframe-display">ex2.html</a>
-                <a href="jquery/ex3.html" class="list-group-item" target="iframe-display">ex3.html</a>
-                <a href="jquery/ex4.html" class="list-group-item" target="iframe-display">ex4.html</a>
-                <a href="jquery/ex5.html" class="list-group-item" target="iframe-display">ex5.html</a>
-                <a href="jquery/ex6.html" class="list-group-item" target="iframe-display">ex6.html</a>
-                <a href="jquery/ex7.html" class="list-group-item" target="iframe-display">ex7.html</a>
-                <a href="jquery/ex8.html" class="list-group-item" target="iframe-display">ex8.html</a>
-                <a href="jquery/ex9.html" class="list-group-item" target="iframe-display">ex9.html</a>
-                <a href="jquery/ex10.html" class="list-group-item" target="iframe-display">ex10.html</a>
-                <a href="jquery/ex11.html" class="list-group-item" target="iframe-display">ex11.html</a>
-                <a href="jquery/ex12.html" class="list-group-item" target="iframe-display">ex12.html</a>
-                <a href="jquery/ex13.html" class="list-group-item" target="iframe-display">ex13.html</a>
-                <a href="jquery/ex14.html" class="list-group-item" target="iframe-display">ex14.html</a>
-                <a href="example/ex15.html" class="list-group-item" target="iframe-display">ex15.html</a>
-                <a href="example/ex16.html" class="list-group-item" target="iframe-display">ex16.html</a>
-                <a href="example/ex17.html" class="list-group-item" target="iframe-display">ex17.html</a>
-                <a href="example/ex18.html" class="list-group-item" target="iframe-display">ex18.html</a>
-                <a href="example/ex19.html" class="list-group-item" target="iframe-display">ex19.html</a>
-                <a href="example/ex20.html" class="list-group-item" target="iframe-display">ex20.html</a>
-                <a href="example/ex21.html" class="list-group-item" target="iframe-display">ex21.html</a>
-                <a href="example/ex22.html" class="list-group-item" target="iframe-display">ex22.html</a>
-                <a href="example/ex23.html" class="list-group-item" target="iframe-display">ex23.html</a>
-                <a href="example/ex24.html" class="list-group-item" target="iframe-display">ex24.html</a>
-                <a href="example/ex25.html" class="list-group-item" target="iframe-display">ex25.html</a>
-                <a href="example/ex26.html" class="list-group-item" target="iframe-display">ex26.html</a>
-                <a href="example/ex27.html" class="list-group-item" target="iframe-display">ex27.html</a>
-                <a href="example/ex28.html" class="list-group-item" target="iframe-display">ex28.html</a>
-                <a href="example/ex29.html" class="list-group-item" target="iframe-display">ex29.html</a>
-                <a href="example/ex30.html" class="list-group-item" target="iframe-display">ex30.html</a>
-                <a href="example/ex31.html" class="list-group-item" target="iframe-display">ex31.html</a>
-                <a href="example/ex32.html" class="list-group-item" target="iframe-display">ex32.html</a>
-                <a href="example/ex33.html" class="list-group-item" target="iframe-display">ex33.html</a>
-                <a href="example/ex34.html" class="list-group-item" target="iframe-display">ex34.html</a>
-                <a href="example/ex35.html" class="list-group-item" target="iframe-display">ex35.html</a>
-                <a href="example/ex36.html" class="list-group-item" target="iframe-display">ex36.html</a>
-            </ul>
+    <div class="container-fluid vh-100 d-flex">
+        <div class="list-group w-20">
+            <a href="jquery/ex1.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex1.html</a>
+            <a href="jquery/ex2.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex2.html</a>
+            <a href="jquery/ex3.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex3.html</a>
+            <a href="jquery/ex4.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex4.html</a>
+            <a href="jquery/ex5.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex5.html</a>
+            <a href="jquery/ex6.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex6.html</a>
+            <a href="jquery/ex7.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex7.html</a>
+            <a href="jquery/ex8.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex8.html</a>
+            <a href="jquery/ex9.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex9.html</a>
+            <a href="jquery/ex10.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex10.html</a>
+            <a href="jquery/ex11.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex11.html</a>
+            <a href="jquery/ex12.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex12.html</a>
+            <a href="jquery/ex13.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex13.html</a>
+            <a href="jquery/ex14.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex14.html</a>
+            <a href="example/ex15.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex15.html</a>
+            <a href="example/ex16.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex16.html</a>
+            <a href="example/ex17.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex17.html</a>
+            <a href="example/ex18.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex18.html</a>
+            <a href="example/ex19.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex19.html</a>
+            <a href="example/ex20.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex20.html</a>
+            <a href="example/ex21.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex21.html</a>
+            <a href="example/ex22.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex22.html</a>
+            <a href="example/ex23.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex23.html</a>
+            <a href="example/ex24.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex24.html</a>
+            <a href="example/ex25.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex25.html</a>
+            <a href="example/ex26.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex26.html</a>
+            <a href="example/ex27.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex27.html</a>
+            <a href="example/ex28.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex28.html</a>
+            <a href="example/ex29.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex29.html</a>
+            <a href="example/ex30.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex30.html</a>
+            <a href="example/ex31.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex31.html</a>
+            <a href="example/ex32.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex32.html</a>
+            <a href="example/ex33.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex33.html</a>
+            <a href="example/ex34.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex34.html</a>
+            <a href="example/ex35.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex35.html</a>
+            <a href="example/ex36.html" class="list-group-item list-group-item-action font-weight-bold" target="iframe-display">ex36.html</a>
         </div>
 
-        <div class="iframe-container">
-            <iframe name="iframe-display" frameborder="0"></iframe>
+        <div class="flex-grow-1 ml-4">
+            <iframe name="iframe-display" class="w-100 h-100 border-0" frameborder="0"></iframe>
         </div>
     </div>
 </body>
