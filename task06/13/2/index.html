@@ -26,7 +26,7 @@
         </tr>
         <tr>
             <td>2</td>
-            <td>애국가</td>
+            <td>미국국가</td>
             <td>
                 <button type="button" id="play2" onclick="play(event)">재생</button>
                 <button type="button" onclick="stop()">중지</button>
@@ -34,7 +34,7 @@
         </tr>
         <tr>
             <td>3</td>
-            <td>애국가</td>
+            <td>영국국가</td>
             <td>
                 <button type="button" id="play3" onclick="play(event)">재생</button>
                 <button type="button" onclick="stop()">중지</button>
@@ -49,13 +49,12 @@
             let who = e.target.id;
             let music = "";
             if(who === "play1") {music = "anthem.wav";}
-            else if(who === "play2") {music = "anthem.wav";}
-            else if(who === "play3") {music = "anthem.wav";}
+            else if(who === "play2") {music = "anthem2.wav";}
+            else if(who === "play3") {music = "anthem3.wav";}
 
             if(audio.src.includes(music))
             {
                 if(audio.paused) {audio.play();}
-                else {audio.pause();}
             }
             else
             {
