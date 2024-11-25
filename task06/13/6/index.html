@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>워커 태스크 만들기</title>
+</head>
+<body>
+    <h3>곱셈하기</h3>
+    <hr>
+    <div>
+        <form>
+            <input type="text" id="num1"> x
+            <input type="text" id="num2">
+            <input type="button" id="calc" value="곱하기" onclick="calcu()"></button>
+            <input type="text" id="result">
+        </form>
+    </div>
+    <script>
+        function calcu()
+        {
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+
+            let worker = new Worker('multiple.js');
+            worker.onmessage = function(e)
+            {
+                document.getElementById("result").value = e.data;
+                worker.terminate();
+            }
+            worker.postMessage([num1, num2]);
+        }
+    </script>
+</body>
+</html>

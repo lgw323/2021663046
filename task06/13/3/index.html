@@ -2,10 +2,22 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title0>다시할까요?</title>
 </head>
 <body>
-    <h3></h3>
+    <h3>애국가 연주</h3>
     <hr>
+    <audio src="anthem.wav" id="audio" controls></audio>
+    <script>
+        let audio = document.getElementById("audio");
+        audio.addEventListener('ended', function() {
+                if(confirm("다시할까요?"))
+                {
+                    audio.currentTime = 0;
+                    audio.play();
+                }
+            }
+        );
+    </script>
 </body>
 </html>

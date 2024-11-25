@@ -2,10 +2,46 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>오디오 재생</title>
 </head>
 <body>
-    <h3></h3>
+    <h3>오디오 재생</h3>
+    <p>듣고 싶은 곡을 선택하고 시작버튼을 누르면 연속하여 자동 연주합니다.</p>
     <hr>
+    <audio src="anthem.wav" id="audio" controls></audio>
+    <form>
+        <label><input type="checkbox" id="song" name="song" value="anthem.wav">애국가</label><br>
+        <label><input type="checkbox" id="song" name="song" value="anthem2.wav">미국국가</label><br>
+        <label><input type="checkbox" id="song" name="song" value="anthem3.wav">영국국가</label>
+    </form>
+    <button type="button" id="start" onclick="start()">연주시작</button>
+    <script>
+        function start()
+        {
+            let audio = document.getElementById("audio");
+            let check = document.querySelectorAll('input[name="song"]:checked');
+            const checkbox = Array.from(check).map(checkbox => checkbox.value);
+            let idx = 0;
+
+            if(checkbox.length === 0)
+            {
+                alert("곡을 선택하지 않음");
+                return;
+            }
+
+            function playsong()
+            {
+                if(idx < checkbox.length)
+                {
+                    audio.src = checkbox[idx];
+                    audio.play();
+                    idx++;
+                }
+                else {alert("모든 곡 재생")}
+            }
+            audio.addEventListener('ended', playsong);
+            playsong();
+        }
+    </script>
 </body>
 </html>
