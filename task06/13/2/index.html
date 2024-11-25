@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>오디오 재생</title>
+    <style>
+        td:first-child {border: 1px solid yellowgreen;}
+        td:nth-child(2) {
+            width: 150px;
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h3>오디오 재생</h3>
+    <hr>
+    <audio id="audio" src="anthem.wav" controls></audio>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>애국가</td>
+            <td>
+                <button type="button" id="play1" onclick="play(event)">재생</button>
+                <button type="button" onclick="stop()">중지</button>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>애국가</td>
+            <td>
+                <button type="button" id="play2" onclick="play(event)">재생</button>
+                <button type="button" onclick="stop()">중지</button>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>애국가</td>
+            <td>
+                <button type="button" id="play3" onclick="play(event)">재생</button>
+                <button type="button" onclick="stop()">중지</button>
+            </td>
+        </tr>
+    </table>
+    <script>
+        let audio = document.getElementById("audio");
+
+        function play(e)
+        {
+            let who = e.target.id;
+            let music = "";
+            if(who === "play1") {music = "anthem.wav";}
+            else if(who === "play2") {music = "anthem.wav";}
+            else if(who === "play3") {music = "anthem.wav";}
+
+            if(audio.src.includes(music))
+            {
+                if(audio.paused) {audio.play();}
+                else {audio.pause();}
+            }
+            else
+            {
+                audio.src = music;
+                audio.play();
+            }
+        }
+        function stop()
+        {
+            if(!audio.paused) {audio.pause();}
+        }
+    </script>
+</body>
+</html>

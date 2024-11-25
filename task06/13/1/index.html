@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>자바스크립트로 비디오 제어</title>
+</head>
+<body>
+    <h3>자바 스크립트로 비디오 제어</h3>
+    <hr>
+    <video id="video" width="300" height="200" controls>
+        <source src="ME.mp4" type="video/mp4">
+    </video>
+    <p>http://127.0.0.1:3000/13/1/ME.mp4를 <span id="now">재생중입니다.</span></p>
+    <button type="button" id="play" onclick="control(event)">play</button>
+    <button type="button" id="pause" onclick="control(event)">pause</button>
+    <button type="button" id="replay" onclick="control(event)">replay</button>
+    <button type="button" id="volm" onclick="control(event)">vol-</button>
+    <button type="button" id="volp" onclick="control(event)">vol+</button>
+    <button type="button" id="mute" onclick="control(event)">mute on/off</button>
+</body>
+<script>
+    let now = document.getElementById("now");
+    let video = document.getElementById("video");
+    function control(e)
+    {
+        let id = e.target.id;
+        if(id == "play")
+        {
+            video.play();
+            now.textContent = "재생중입니다.";
+        }
+        else if (id == "pause")
+        {
+            video.pause();
+            now.textContent = "일시 정지되었습니다.";
+        } 
+        else if (id == "replay")
+        {
+            video.currentTime = 0;
+            video.play();
+            now.textContent = "다시 재생 중입니다.";
+        } 
+        else if (id == "volm")
+        {
+            if (video.volume > 0.1)
+            {
+                video.volume -= 0.1;
+                now.textContent = "볼륨이 감소되었습니다.";
+            } 
+            else 
+            {
+                video.volume = 0;
+                now.textContent = "볼륨이 최저입니다.";
+            }
+        } 
+        else if (id == "volp")
+        {
+            if (video.volume < 0.9)
+            {
+                video.volume += 0.1;
+                now.textContent = "볼륨이 증가되었습니다.";
+            } 
+            else 
+            {
+                video.volume = 1;
+                now.textContent = "볼륨이 최고입니다.";
+            }
+        } 
+        else if (id == "mute")
+        {
+            video.muted = !video.muted;
+            now.textContent = video.muted ? "음소거 상태입니다." : "음소거 해제되었습니다.";
+        }
+    }
+</script>
+</html>
