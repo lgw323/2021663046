@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>나의 단어장 만들기</title>
+</head>
+<body>
+    <h3>나의 단어장 만들기</h3>
+    <hr>
+    <div>
+        영어 <input id="eng" type="text"><br>
+        한글 <input id="kor" type="text"><br>
+        <button type="button" id="save" onclick="save()">단어 저장</button>
+        <button type="button" id="find" onclick="find()">영단어 검색</button>
+        <button type="button" id="wordcut" onclick="wordcut()">단어 삭제</button>
+        <button type="button" id="see" onclick="see()">전체 보기</button>
+    </div>
+    <script>
+        function save()
+        {
+            let eng = document.getElementById("eng").value;
+            let kor = document.getElementById("kor").value;
+            if(!window.localStorage)
+            {
+                alert("로컬 스토리지를 지원하지 않음");
+                return;
+            }
+            if(localStorage.getItem(eng) !== null)
+            {
+                if(confirm(eng+"가 이미 있습니다. 수정하시겠습니까?")) {localStorage.setItem(eng, kor);}
+            }
+            else {localStorage.setItem(eng, kor);}
+        }
+        function find()
+        {
+            let eng = document.getElementById("eng").value;
+            if(!window.localStorage)
+            {
+                alert("로컬 스토리지를 지원하지 않음");
+                return;
+            }
+            if(localStorage.getItem(eng) !== null) {document.getElementById("kor").value = localStorage.getItem(eng);}
+            else {alert(eng+"는 없는 단어입니다.");}
+        }
+        function wordcut()
+        {
+            let eng = document.getElementById("eng").value;
+            if(!window.localStorage)
+            {
+                alert("로컬 스토리지를 지원하지 않음");
+                return;
+            }
+            if(localStorage.getItem(eng) !== null) {localStorage.removeItem(eng);}
+            else {alert(eng+"는 없는 단어입니다.");}
+        }
+        function see()
+        {
+            if(!window.localStorage)
+            {
+                alert("로컬 스토리지를 지원하지 않음");
+                return;
+            }
+            let newWindow = window.open("index2.html","단어장 출력");
+        }
+    </script>
+</body>
+</html>

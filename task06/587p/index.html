@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>오디오 리스트 연속 재생</title>
+</head>
+<body>
+    <h3>오디오 리스트 연속 재생</h3>
+    <hr>
+    <p>
+        처음 play버튼을 누르면 리스트에 있는 곡이 연속하여 자동 재생 됩니다.
+        마우스로 다른 곡을 선택하면 곡이 바뀝니다. next버튼을 누르면 다음 곡으로 넘어갑니다.
+    </p>
+    <hr>
+    <audio src="music/anthem.wav" id="audio" controls></audio><br>
+    <select size="3" id="song" style="width: 200px;" onchange="changesong()">
+        <option value="music/anthem.wav">애국가</option>
+        <option value="music/anthem2.wav">미국국가</option>
+        <option value="music/anthem3.wav">영국국가</option>
+    </select>
+    <button type="button" id="play" onclick="playsong()">play</button>
+    <button type="button" id="next" onclick="nextsong()">next</button><br>
+    <p id="current">현재 연주되는 곡명이 보입니다.</p>
+    <script>
+        const audio = document.getElementById("audio");
+        const select = document.getElementById("song");
+        const current = document.getElementById("current");
+        
+        const options = Array.from(select.options).map(option => option.value);
+        let idx = 0;
+        
+        function currentsong()
+        {
+            select.selectedIndex = idx;
+            current.textContent = select.options[idx].text+"를 재생합니다.";
+        }
+        function playsong()
+        {
+            currentsong();
+            audio.play();
+        }
+        function nextsong()
+        {
+            idx = (idx + 1) % options.length;
+            audio.src = options[idx];
+            currentsong();
+            audio.play();
+        }
+        function changesong()
+        {
+            idx = select.selectedIndex;
+            audio.src = select.value;
+            currentsong();
+            audio.play();
+        }
+        audio.addEventListener('ended',nextsong);
+    </script>
+</body>
+</html>
