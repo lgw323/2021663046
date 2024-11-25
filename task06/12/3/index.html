@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>포스트잇</title>
+</head>
+<body>
+    <h3>포스트잇</h3>
+    <hr>
+    <div>
+        제목 <input id="title" type="text"><br>
+        메모입력<br>
+        <textarea name="content" id="content" cols="30" rows="5"></textarea>
+    </div>
+    <button type="button" id="save" onclick="save()">저장</button> <button type="button" id="see" onclick="see()">보기</button>
+    <script>
+        function save()
+        {
+            let title = document.getElementById("title");
+            let content = document.getElementById("content");
+            if(!window.localStorage)
+            {
+                alert("로컬 스토리지를 지원하지 않음");
+                return;
+            }
+            localStorage.setItem(title.value, content.value);
+        }
+        function see()
+        {
+            if(!window.localStorage)
+            {
+                alert("로컬 스토리지를 지원하지 않음");
+                return;
+            }
+            let newWindow = window.open("index2.html","포스트잇 출력");
+        }
+    </script>
+</body>
+</html>
