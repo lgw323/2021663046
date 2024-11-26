@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부트스트랩으로 다 엮기</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h3>자바스크립트 문법기초</h3>
+        <div id="treeview"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.js"></script>
+    
+    <script>
+        $(function () {
+            const treeData = [
+                {
+                    text: "1. 변수",
+                    nodes: [
+                        {
+                            text: "1.1. 변수만들기",
+                            nodes: [
+                                {
+                                    text: "1.1.1. 나이",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            /*<br>
+                                            예제01: 여러분의 나이가 담긴 변수 age를 만들어 주세요.<br>
+                                            */<br>
+                                            var age = 30;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.1.2. 이름과 나이",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            /*<br>
+                                            예제02: 여러분의 이름과 나이를 저장한 변수를 만들어 주세요.<br>
+                                            */<br>
+                                            var name = "ddandongne";<br>
+                                            var age = 30;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.1.3. 이름과 나이 콤마 활용",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            /*<br>
+                                            예제03: 여러분의 이름과 나이를 저장한 변수를 콤마(,)를 이용해서 만들어 주세요.<br>
+                                            */<br>
+                                            var name = "ddandongne", age = 30;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.1.4. 변수 만들때의 주의사항",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            /*<br>
+                                            03. 변수이름 만들 때 주의사항<br>
+                                            예제 : 변수 만들때 주의 사항 테스트.<br>
+                                            */<br>
+                                            <br>
+                                            // 1. 숫자로 시작하면 안되요.<br>
+                                            var 1 st = 10;<br>
+                                            <br>
+                                            // 2. 대소문자 구분 : name과 Name은 완전히 다른 변수랍니다.<br>
+                                            var name = "ddandongne";<br>
+                                            var Name = "ddandongne";<br>
+                                            <br>
+                                            // 3. 변수는 대문자가 아닌 소문자로 시작하세요.<br>
+                                            var Name = "ddandongne";<br>
+                                            //대신<br>
+                                            var name = "ddandongne";<br>
+                                            <br>
+                                            // 4. 변하지 않는 환경 변수의 값을 담는 상수 변수는 모두 대문자로 만들어 주세요.<br>
+                                            var DB_NAME = "webdongne";<br>
+                                            var ADMIN_ID = "ddandongne";<br>
+                                            <br>
+                                            // 5. 여러 단어가 조합되는 경우 다음과 같이 낙타 표기법(camelcase)으로 작성해 주세요.<br>
+                                            var userName = "ddandongne";<br>
+                                            var selectMenuIndex = 1;<br>
+                                            <br>
+                                            // 5. 문장과 세미콜론(문장뒤에 세미콜론 찍기)<br>
+                                            var age = 10;<br>
+                                            <br>
+                                            // 6. 자바스크립트에서 이미 정의된 예약어(키워드)를 사용하면 안돼요.<br>
+                                            var class = "test1";<br>
+                                            var for = "test2";<br>
+                                            var if = "test3";<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            text: "1.2. 변수에 저장할 수 있는 데이터 종류",
+                            nodes: [
+                                {
+                                    text: "1.2.1. 숫자데이터 나이 몸무게",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.2.2. 문자데이터 아이디",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.2.3. 문자데이터 나이",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.2.4. 논리데이터 로그인 유무",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.2.5. 논리데이터 날씨",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.2.6. undefined 변수",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.2.7. undefined 함수",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.2.8. undefined 존재하지않는 프로퍼티",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.2.9. null null로 데이터 초기화",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            text: "1.3. 변수에 데이터 저장",
+                            nodes: [
+                                {
+                                    text: "1.3.1. 변수값 저장",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.3.2. 변수값 변경",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.3.1. 돌발질문",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            text: "1.4. 변수값이 자동으로 읽혀지는 경우",
+                            nodes: [
+                                {
+                                    text: "1.4.1. 우측에 변수를 두는 경우",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.4.2. 함수호출시",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.4.3. 연산자와 함께 사용하는 경우",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            text: "1.5. 변수를 활용한 데이터 중복 제거 및 재사용",
+                            nodes: [
+                                {
+                                    text: "1.5.1. 변수 활용하기",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.5.2. 변수 사용하지 않기",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.5.3. 변수 사용하는 경우",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            text: "1.6. 변수값 확인하기",
+                            nodes: [
+                                {
+                                    text: "1.6.1. alert.html",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.6.2. document.write.html",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.6.3. document.write 이름과 나이",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.6.4. console.log.html",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            text: "1.7. 주석",
+                            nodes: [
+                                {
+                                    text: "1.7.1. 한줄 주석 달기",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.7.2. 여러줄 주석 달기",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            text: "1.8. 배열 변수",
+                            nodes: [
+                                {
+                                    text: "1.8.1. 배열 요소 출력",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.8.2. 배열을 사용하지 않은 풀이",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.8.3. 배열을 사용한 풀이",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            text: "1.9. 변수 종류 정리",
+                            nodes: [
+                                {
+                                    text: "1.9.1. 전역변수",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            /*<br>
+                                            예제: 지역변수, 전역변수를 구분해주세요.<br>
+                                            */<br>
+                                            <br>
+                                            var globalV = "전역변수";<br>
+                                            <br>
+                                            window.onload = function() {<br>
+                                                global2 = "전역변수";<br>
+                                            }<br>
+                                            <br>
+                                            function func1() {<br>
+                                                var local1 = "지역변수";<br>
+                                            }<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.9.2. 지역변수",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.9.3. 매개변수",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                },
+                                {
+                                    text: "1.9.4. 멤버변수",
+                                    nodes: [
+                                        {
+                                            text:
+                                            `<br>&lt;script&gt;<br>
+                                            &lt;/script&gt;`
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ];
+
+            $('#treeview').treeview({
+                data: treeData,
+                expandIcon: 'bi bi-plus-lg',
+                collapseIcon: 'bi bi-dash-lg',
+                nodeIcon: 'bi bi-folder',
+                showBorder: true,
+                highlightSelected: true
+            });
+        });
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</body>
+</html>
