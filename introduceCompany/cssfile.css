@@ -1,0 +1,165 @@
+:root {
+/* 스마일게이트 브랜드 컬러 (예상, 사용자 지정) */
+--sg-primary: #ff7a00;
+--sg-secondary: #ff4500;
+--sg-text: #333;
+--sg-light-bg: #fff7f0;
+}
+
+body {
+font-family: sans-serif;
+margin: 0;
+padding: 0;
+color: var(--sg-text);
+background: #fff;
+}
+
+header h1 {
+color: var(--sg-primary);
+font-weight: bold;
+}
+
+.hero {
+background: linear-gradient(135deg, rgba(255, 122, 0, 0.7), rgba(255, 69, 0, 0.7)),
+            url('image/Smilegate_group_official_logo.png') no-repeat center center;
+background-size: cover;
+padding: 220px 20px;
+color: #fff;
+text-align: center;
+font-weight: bold;
+}
+
+nav a {
+text-decoration: none;
+color: var(--sg-primary);
+margin: 0 15px;
+font-weight: bold;
+transition: color 0.3s ease;
+}
+
+nav a:hover {
+color: var(--sg-secondary);
+}
+
+section {
+padding: 60px 20px;
+}
+
+section h2 {
+color: var(--sg-secondary);
+font-weight: bold;
+margin-bottom: 30px;
+text-align: center;
+}
+
+footer {
+text-align: center;
+padding: 20px;
+background: var(--sg-primary);
+color: #fff;
+}
+
+footer p {
+margin: 0;
+}
+
+/* 회사소개 섹션 */
+#about p {
+font-size: 1.1em;
+line-height: 1.6em;
+text-align: center;
+max-width: 800px;
+margin: 0 auto;
+}
+
+/* 연혁 섹션 */
+#history ul {
+max-width: 600px;
+margin: 0 auto;
+list-style: none;
+padding: 0;
+}
+#history ul li {
+margin-bottom: 10px;
+font-size: 1.05em;
+position: relative;
+padding-left: 20px;
+}
+#history ul li:before {
+content: "•";
+color: var(--sg-secondary);
+position: absolute;
+left: 0;
+}
+
+/* 기업문화 섹션 */
+#culture h3 {
+color: var(--sg-primary);
+margin-bottom: 15px;
+font-weight: bold;
+}
+#culture p {
+font-size: 1em;
+line-height: 1.5em;
+}
+
+/* 계열사 섹션 */
+#subsidiary .card {
+background: var(--sg-light-bg);
+border: none;
+border-radius: 8px;
+text-align: center;
+padding: 20px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#subsidiary .card:hover {
+transform: translateY(-5px);
+box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+#subsidiary .card img {
+max-height: 100px;
+object-fit: contain;
+margin-bottom: 20px;
+}
+#subsidiary .card h4 {
+color: var(--sg-primary);
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+/* 주요 게임/서비스 섹션 */
+#products .card {
+border: 1px solid #eee;
+border-radius: 8px;
+text-align: center;
+padding: 20px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#products .card:hover {
+transform: translateY(-5px);
+box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+#products .card h3 {
+color: var(--sg-primary);
+margin-bottom: 15px;
+font-weight: bold;
+}
+
+/* 채용정보 섹션 */
+#jobs p {
+max-width: 800px;
+margin: 0 auto;
+line-height: 1.6em;
+text-align: center;
+font-size: 1.1em;
+}
+#jobs a {
+color: var(--sg-secondary);
+font-weight: bold;
+text-decoration: none;
+border-bottom: 2px solid var(--sg-secondary);
+}
+#jobs a:hover {
+color: var(--sg-primary);
+border-bottom: 2px solid var(--sg-primary);
+}
