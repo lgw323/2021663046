@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>내 이름 그리기</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* 가로 중앙 정렬 */
+            justify-content: center; /* 세로 중앙 정렬 */
+            margin: 0;
+            
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <h3>내 이름 그리기</h3>
+    <hr>
+    <canvas id="First" width="400" height="200" style="background-color: #f0f0f0;"></canvas>
+
+    <script>
+        let canvas = document.getElementById("First");
+        let context = canvas.getContext("2d");
+
+        context.strokeStyle = "#4f4f4f";
+        context.lineWidth = 5;
+
+        context.beginPath();
+        context.arc(100, 70, 30, 0, 2*Math.PI, false);
+        context.stroke();
+        
+        // ㅣ자
+        context.beginPath();
+        context.moveTo(140, 20);
+        context.lineTo(140, 130);
+        context.stroke();
+
+        // ㄱ자
+        context.beginPath();
+        context.moveTo(160, 40);
+        context.lineTo(200, 40);
+        context.lineTo(160, 100);
+        context.stroke();
+        
+        // -자
+        context.beginPath();
+        context.moveTo(180, 70);
+        context.lineTo(220, 70);
+        context.stroke();
+
+        // ㅣ자
+        context.beginPath();
+        context.moveTo(220, 20);
+        context.lineTo(220, 130);
+        context.stroke();
+
+        // ㄴ자
+        context.beginPath();
+        context.moveTo(180, 100);
+        context.lineTo(180, 150);
+        context.lineTo(230, 150);
+        context.stroke();
+
+        // ㅇ자
+        context.beginPath();
+        context.arc(280, 70, 30, 0, 2*Math.PI, false);
+        context.stroke();
+
+        // ㅡ자
+        context.beginPath();
+        context.moveTo(240, 110);
+        context.lineTo(320, 110);
+        context.stroke();
+
+        // ㅣ자
+        context.beginPath();
+        context.moveTo(280, 110);
+        context.lineTo(280, 150);
+        context.stroke();
+    </script>
+</body>
+</html>
